@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Voice of Tomorrow</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#f8f8f8;
+color:#1a1a1a;
+line-height:1.7;
+}
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:#081c3a;
+padding:15px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:1000;
+}
+
+.logo{
+font-family:'Bebas Neue',sans-serif;
+font-size:2rem;
+letter-spacing:2px;
+color:#f5b942;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:20px;
+}
+
+nav ul li a{
+color:white;
+text-decoration:none;
+font-weight:500;
+}
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(8,28,58,.75),rgba(8,28,58,.75)),
+url('https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=1400&q=80');
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+color:white;
+}
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+color:white;
+}
+}
+background-size:cover;
+background-position:center;
+}
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+color:white;
+}
+
+.hero-content h1{
+font-family:'Bebas Neue',sans-serif;
+font-size:5rem;
+letter-spacing:4px;
+}
+
+.hero-content p{
+max-width:700px;
+margin:auto;
+font-size:1.1rem;
+margin-top:15px;
+}
+.hero-logo{
+width:180px;
+height:auto;
+margin-bottom:20px;
+background:white;
+padding:10px;
+border-radius:15px;
+}
+.btn-group{
+margin-top:30px;
+}
+
+.btn{
+display:inline-block;
+padding:14px 28px;
+margin:8px;
+text-decoration:none;
+border-radius:5px;
+font-weight:600;
+transition:.3s;
+}
+
+.primary{
+background:#f5b942;
+color:#081c3a;
+}
+
+.secondary{
+border:2px solid white;
+color:white;
+}
+
+.primary:hover,
+.secondary:hover{
+transform:translateY(-3px);
+}
+
+section{
+padding:90px 10%;
+}
+
+.section-title{
+font-family:'Bebas Neue',sans-serif;
+font-size:3rem;
+text-align:center;
+color:#081c3a;
+margin-bottom:30px;
+}
+
+.about,
+.news,
+.contact{
+max-width:1100px;
+margin:auto;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+margin-top:40px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 4px 15px rgba(0,0,0,.08);
+}
+
+.card h3{
+color:#081c3a;
+margin-bottom:10px;
+}
+
+.news-item{
+background:white;
+padding:20px;
+border-left:5px solid #f5b942;
+margin-bottom:15px;
+border-radius:8px;
+}
+.card{
+background:white;
+padding:25px;
+border-radius:16px;
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card h3{
+color:#081c3a;
+margin-bottom:10px;
+font-size:20px;
+font-weight:700;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:16px;
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card h3{
+color:#081c3a;
+margin-bottom:10px;
+font-size:20px;
+font-weight:700;
+}
+
+.card p{
+font-size:16px;
+line-height:1.8;
+color:#444;
+}
+.join-form{
+background:white;
+padding:30px;
+border-radius:12px;
+max-width:700px;
+margin:auto;
+box-shadow:0 4px 15px rgba(0,0,0,.08);
+}
+
+.join-form input,
+.join-form textarea{
+width:100%;
+padding:14px;
+margin:10px 0;
+border:1px solid #ddd;
+border-radius:6px;
+}
+
+.join-form button{
+width:100%;
+padding:15px;
+background:#081c3a;
+color:white;
+border:none;
+border-radius:6px;
+cursor:pointer;
+font-size:1rem;
+}
+
+.contact-box{
+text-align:center;
+}
+
+.contact-btn{
+display:inline-block;
+background:#081c3a;
+color:white;
+padding:15px 30px;
+text-decoration:none;
+border-radius:8px;
+margin-top:20px;
+}
+
+footer{
+background:#081c3a;
+color:white;
+text-align:center;
+padding:30px;
+}
+
+@media(max-width:768px){
+
+.hero-content h1{
+font-size:3.2rem;
+}
+
+nav ul{
+display:none;
+}
+
+.section-title{
+font-size:2.4rem;
+}
+}
+  .stats{
+background:#081c3a;
+padding:60px 10%;
+display:flex;
+justify-content:center;
+gap:40px;
+flex-wrap:wrap;
+text-align:center;
+}
+
+.stat-box{
+color:white;
+}
+
+.stat-box h2{
+font-size:3rem;
+color:#f5b942;
+font-family:'Bebas Neue',sans-serif;
+}
+
+.stat-box p{
+font-size:1rem;
+letter-spacing:1px;
+  .hero-logo{
+width:120px;
+height:auto;
+margin-bottom:20px;
+filter:drop-shadow(0 5px 15px rgba(0,0,0,.3));
+}
+
+.hero-content{
+animation:fadeUp 1s ease;
+}
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+}
+  .section{
+padding:80px 20px;
+text-align:center;
+}
+
+.section h2{
+font-size:2.5rem;
+margin-bottom:30px;
+color:#081c3a;
+}
+
+.cards{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:20px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+max-width:350px;
+}
+
+.card h3{
+font-size:20px;
+margin-bottom:10px;
+color:#081c3a;
+}
+
+.card p{
+font-size:16px;
+line-height:1.8;
+}
+
+footer{
+background:#081c3a;
+color:white;
+padding:25px;
+text-align:center;
+}
+ html{
+scroll-behavior:smooth;
+}
+
+.section{
+padding:80px 20px;
+text-align:center;
+animation:fadeUp 1s ease;
+}
+
+.section h2{
+font-size:2.5rem;
+margin-bottom:30px;
+color:#081c3a;
+}
+
+.cards{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:20px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+max-width:350px;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 15px 30px rgba(0,0,0,.15);
+}
+
+.card h3{
+font-size:20px;
+margin-bottom:10px;
+color:#081c3a;
+}
+
+.card p{
+font-size:16px;
+line-height:1.8;
+}
+
+.btn{
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+}
+
+footer{
+background:#081c3a;
+color:white;
+padding:30px;
+text-align:center;
+}
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+} 
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="logo">VOICE OF TOMORROW</div>
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#focus">Focus</a></li>
+<li><a href="#news">News</a></li>
+<li><a href="#join">Join</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<section class="hero">
+<div class="hero-content">
+
+<h1>VOICE OF TOMORROW</h1>
+<p>
+Kerala's Youth. Kerala's Future.
+A platform built to empower young people through leadership,
+awareness, opportunities and action.
+</p>
+
+<div class="btn-group">
+<a href="#join" class="btn primary">JOIN THE MOVEMENT</a>
+<a href="#contact" class="btn secondary">CONTACT US</a>
+</div>
+</div>
+</section>
+<section class="stats">
+
+<div class="stat-box">
+<h2>500+</h2>
+<p>Supporters</p>
+</div>
+
+<div class="stat-box">
+<h2>14</h2>
+<p>Districts</p>
+</div>
+
+<div class="stat-box">
+<h2>50+</h2>
+<p>Volunteers</p>
+</div>
+
+</section>
+<section id="about">
+<h2 class="section-title">WHO WE ARE</h2>
+
+<div class="about">
+<p>
+Voice of Tomorrow is a youth-driven initiative dedicated to creating
+opportunities, encouraging leadership and amplifying the voices of
+young people across Kerala.
+</p>
+</div>
+</section>
+
+<section id="focus">
+<h2 class="section-title">OUR FOCUS</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Employment & Opportunities</h3>
+<p>
+Creating awareness about jobs, entrepreneurship and career growth.
+</p>
+</div>
+
+<div class="card">
+<h3>Education & Growth</h3>
+<p>
+Supporting education, skills development and future readiness.
+</p>
+</div>
+
+<div class="card">
+<h3>Leadership</h3>
+<p>
+Encouraging youth participation in community and civic initiatives.
+</p>
+</div>
+
+<div class="card">
+<h3>Equality & Representation</h3>
+<p>
+Promoting fair opportunities and inclusive discussions.
+</p>
+</div>
+
+</div>
+</section>
+
+<section id="news">
+<h2 class="section-title">NEWS & UPDATES</h2>
+
+<div class="news">
+
+<div class="news-item">
+<h3>Volunteer Registration Open</h3>
+<p>Applications are now open for new volunteers.</p>
+</div>
+
+<div class="news-item">
+<h3>Youth Discussion Forum</h3>
+<p>Upcoming discussions on youth opportunities and development.</p>
+</div>
+
+<div class="news-item">
+<h3>Community Events</h3>
+<p>Stay updated with future activities and announcements.</p>
+</div>
+
+</div>
+</section>
+
+<section id="join">
+<h2 class="section-title">JOIN US</h2>
+
+<form class="join-form">
+
+<input type="text" placeholder="Full Name" required>
+
+<input type="number" placeholder="Age" required>
+
+<input type="text" placeholder="District" required>
+
+<input type="tel" placeholder="Phone Number" required>
+
+<input type="email" placeholder="Email Address" required>
+
+<textarea rows="5" placeholder="Why do you want to join?"></textarea>
+
+<button type="submit">SUBMIT APPLICATION</button>
+
+</form>
+</section>
+<section class="section">
+<h2>Our Activities</h2>
+
+<div class="cards">
+<div class="card">
+<h3>Leadership Training</h3>
+<p>Programs to develop leadership and communication skills.</p>
+</div>
+
+<div class="card">
+<h3>Social Awareness</h3>
+<p>Campaigns addressing social and environmental issues.</p>
+</div>
+
+<div class="card">
+<h3>Community Service</h3>
+<p>Volunteer projects and community development initiatives.</p>
+</div>
+</div>
+</section>
+
+<section class="section">
+<h2>Our Impact</h2>
+
+<div class="cards">
+<div class="card">
+<h3>1000+</h3>
+<p>Youth Members</p>
+</div>
+
+<div class="card">
+<h3>14</h3>
+<p>District Presence</p>
+</div>
+
+<div class="card">
+<h3>50+</h3>
+<p>Projects Completed</p>
+</div>
+</div>
+</section>
+<section class="section">
+<h2>Latest Updates</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Volunteer Registration Open</h3>
+<p>Applications are now open for youth volunteers across Kerala.</p>
+</div>
+
+<div class="card">
+<h3>District Expansion</h3>
+<p>Building networks and communities in all 14 districts.</p>
+</div>
+
+<div class="card">
+<h3>Youth Leadership Program</h3>
+<p>Upcoming initiatives focused on leadership and skill development.</p>
+</div>
+
+</div>
+</section>
+
+<section class="section">
+<h2>Become Part of the Change</h2>
+
+<div class="card">
+<p>
+Join Voice of Tomorrow and help build a stronger future for Kerala's youth.
+Together we can create opportunities, encourage leadership and drive positive change.
+</p>
+
+<a href="#join" class="btn primary">
+JOIN THE MOVEMENT
+</a>
+
+</div>
+</section>
+
+<footer>
+<h3>VOICE OF TOMORROW</h3>
+<p>Youth • Unity • Progress</p>
+<p>@votofficial</p>
+</footer>
+
+<script>
+document.querySelector('.join-form').addEventListener('submit', function(e){
+e.preventDefault();
+alert('Thank you for your interest. Registration system can be connected to Google Forms or a database later.');
+});
+</script>
+<!-- ABOUT SECTION -->
+<section class="section">
+    <h2>About Us</h2>
+    <div class="card">
+        <p>
+            Voice of Tomorrow is a youth-led platform dedicated to empowering
+            Kerala's next generation through leadership, awareness, social
+            responsibility, and community engagement.
+        </p>
+    </div>
+</section>
+
+<!-- MISSION & VISION -->
+<section class="section">
+    <h2>Our Mission & Vision</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Mission</h3>
+            <p>
+                To inspire, educate, and empower young people through
+                leadership opportunities, social initiatives, and skill
+                development programs.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Vision</h3>
+            <p>
+                To build a generation of responsible, confident, and impactful
+                leaders who contribute positively to society.
+            </p>
+        </div>
+    </div>
+</section>
+
+<
+<!-- CONTACT -->
+<section class="section">
+    <h2>Contact Us</h2>
+
+    <div class="card">
+        <p>Email: info@voiceoftomorrow.org</p>
+        <p>Phone: +91 XXXXX XXXXX</p>
+        <p>Location: Kerala, India</p>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2025 Voice of Tomorrow. All Rights Reserved.</p>
+</footer>
+</body>
+</html>
